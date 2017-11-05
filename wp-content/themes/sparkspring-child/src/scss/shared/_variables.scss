@@ -1,0 +1,75 @@
+/*----------------------------------------------------------------------
+  FONTS
+----------------------------------------------------------------------*/
+$font-family-base:	   'Work Sans', sans-serif;
+$font-weight-base:     400;
+$font-family-headline: 'Oswald', sans-serif;
+$font-weight-headline: 400;
+$font-family-callout:  $font-family-base;
+$font-size-base:       10px;
+$line-height-base:     1.5;
+
+
+/*----------------------------------------------------------------------
+  COLORS
+----------------------------------------------------------------------*/
+
+/* Social media colors */
+$facebook-blue:    #3c5b9b;
+$google-plus-red:  #f63d27;
+$instagram-blue:   #517fa4;
+$pinterest-red:    #cb2027;
+$twitter-blue:     #2daae1;
+$youtube-red:      #e14e42;
+
+/* Site colors */
+$black: #1f1f1f;
+$orange: #ff5d02;
+$red: #913225;
+
+/* SparkSpring colors */
+$sparkspring-green-light: #50b6a8;
+$sparkspring-green-dark: #139980;
+$sparkspring-red-light: #f79f88;
+$sparkspring-red-dark: #f26c57;
+$sparkspring-blue-light: #495966;
+$sparkspring-blue-dark: #1b2b39;
+
+/*----------------------------------------------------------------------
+  FORMS
+----------------------------------------------------------------------*/
+$form-element-spacing: 1rem;
+$input-border-color:   #fff;
+$input-border-radius:  0;
+$input-border-width:   1px;
+$input-padding:        1.5rem;
+$form-error-color:	   #f00;
+
+
+/*----------------------------------------------------------------------
+  CONTAINERS & GRID
+----------------------------------------------------------------------*/
+$container-max-width: 1120px;
+$container-width:     87.5%;
+$design-width:        1280px;
+
+
+/*----------------------------------------------------------------------
+  BREAKPOINTS
+----------------------------------------------------------------------*/
+$phablet:  640px;
+$tablet:   767px;
+$laptop:   1024px;
+$desktop:  1280px;
+$fullsize: $design-width;
+$mobile-nav-breakpoint: $laptop;
+
+
+/*----------------------------------------------------------------------
+  CALCULATIONS & STANDARDS
+  You should not have to edit anything below this line.
+
+----------------------------------------------------------------------*/
+$border-box-sizing:  true;
+$fa-font-path:       'fonts';
+$max-width:          #{$container-max-width/$font-size-base}rem;

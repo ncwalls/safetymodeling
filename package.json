@@ -1,0 +1,36 @@
+{
+  "name": "wpframework",
+  "version": "1.1.0",
+  "description": "Custom installer for the SparkSpring WordPress framework",
+  "main": "index.js",
+  "scripts": {
+    "framework-editor": "npm install adm-zip && npm install async && npm install os && npm install ncp && npm install prompt && npm install simple-git && node framework-editor.js && npm install && bower install",
+    "installer": "npm install adm-zip && npm install async && npm install os && npm install ncp && npm install prompt && npm install simple-git && node installer.js && npm install && bower install"
+  },
+  "author": "SparkSpring",
+  "contributors": [
+    {
+      "name": "Joe Ponzio",
+      "url": "https://github.com/joeponzio"
+    },
+    {
+      "name": "Nathan Walls",
+      "url": "https://github.com/ncwalls"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "*",
+    "autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-notify": "*",
+    "gulp-postcss": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "jshint": "*"
+  }
+}

@@ -1,0 +1,78 @@
+body{
+	font-size: 1.6rem;
+}
+
+h1,h2,h3,h4,h5{
+	text-transform: uppercase;
+	
+	strong{
+		color: $orange;
+		font-weight: 400;
+	}
+}
+
+h1{
+	font-size: 5rem;
+	
+	@media (max-width : $tablet) {
+		font-size: 4rem;
+	}
+}
+h2{
+	font-size: 3.6rem;
+	
+	@media (max-width : $tablet) {
+		font-size: 3rem;
+	}
+}
+h3{
+	font-size: 2rem;
+}
+
+a{
+	color: $orange;
+	text-decoration: none;
+	transition: color 0.2s;
+	
+	&:hover{
+		color: $black;
+	}
+}
+
+.plus-button{
+	background: $orange;
+	border-radius: 50%;
+	clear: both;
+	color: #fff;
+	display: block;
+	position: relative;
+	width: 5rem;
+	height: 5rem;
+	transition: background 0.2s;
+
+	&:hover{
+		background: $black;
+	}
+
+	&:before,
+	&:after{
+		background: #fff;
+		content: '';
+		display: block;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+	}
+	&:before{
+		width: 2px;
+		height: 2.6rem;
+	}
+	&:after{
+		height: 2px;
+		width: 2.6rem;
+	}
+}

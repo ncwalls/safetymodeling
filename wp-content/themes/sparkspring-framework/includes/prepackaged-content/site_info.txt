@@ -1,0 +1,3 @@
+All information on this website is property of <strong>{{site_name}}</strong> &copy;{{year}}.
+
+All material at this website, such as text, images, markup, CSS, programming, TITLE tag content, META element tag content, and design, is &copy;{{year}} to <strong>{{site_name}}</strong> and may not be reproduced elsewhere in any way without our express written permission.
