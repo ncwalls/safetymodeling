@@ -11,7 +11,7 @@
 					</h1>
 				</div>
 			</div>
-			<section class="services">
+			<section class="services-list">
 				<div class="container">
 					<h2><?php the_field('service_title'); ?></h2>
 					<ul>
@@ -81,18 +81,18 @@
 							<article>
 								<?php if(get_the_post_thumbnail_url( $recent_post->ID)): ?>
 									<figure>
-										<a href="<?php get_permalink($recent_post->ID); ?>">
+										<a href="<?php echo get_permalink($recent_post->ID); ?>">
 											<img src="<?php echo get_the_post_thumbnail_url( $recent_post->ID, 'medium' ); ?>" alt="">
 										</a>
 									</figure>
 								<?php endif; ?>
 								<div class="content">
-									<h3><a href="<?php get_permalink($recent_post->ID); ?>" title="<?php echo get_the_title($recent_post->ID); ?>"><?php echo get_the_title($recent_post->ID); ?></a></h3>
+									<h3><a href="<?php echo get_permalink($recent_post->ID); ?>" title="<?php echo get_the_title($recent_post->ID); ?>"><?php echo get_the_title($recent_post->ID); ?></a></h3>
 									<ul class="post-meta">
 										<li><?php echo get_the_time( 'F j, Y', $recent_post->ID ); ?></li>
 										<li><?php echo SparkSpringFramework::read_time($recent_post->ID); ?></li>
 									</ul>
-									<a href="<?php get_permalink($recent_post->ID); ?>" class="plus-button"></a>
+									<a href="<?php echo get_permalink($recent_post->ID); ?>" class="plus-button"></a>
 								</div>
 							</article>
 						<?php endforeach; ?>

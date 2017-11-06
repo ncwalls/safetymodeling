@@ -4,6 +4,11 @@
 }
 
 .blog-list{
+	border-top: 1px solid $gray;
+	border-bottom: 1px solid $gray;
+	overflow: hidden;
+	margin: 5rem 0;
+	
 	article{
 		float: left;
 		margin: 2.6rem 8% 2.6rem 0;
@@ -112,6 +117,36 @@
 			@media (max-width : $phablet) {
 				margin-top: 2rem;
 			}
+		}
+	}
+}
+
+
+.archive-nav{
+	clear: both;
+	font-family: $font-family-headline;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	line-height: 3rem;
+	list-style: none;
+	text-align: center;
+	text-transform: uppercase;
+	
+	.page-numbers{
+		display: inline-block;
+		margin: 0 0.7rem;
+		
+		&:hover{
+			//color: $blue;
+		}
+		
+		&.current{
+			border-radius: 50%;
+			background: $orange;
+			color: #fff;
+			width: 3rem;
+			height: 3rem;
+			text-align: center;
 		}
 	}
 }

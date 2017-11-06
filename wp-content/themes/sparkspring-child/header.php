@@ -30,7 +30,9 @@
 					<?php wp_nav_menu( array(
 						'container' => 'nav',
 						'container_id' => 'ocn-nav-primary',
-						'theme_location' => 'primary'
+						'theme_location' => 'primary',
+						'before' => '<span class="ocn-link-wrap">',
+						'after' => '<span class="ocn-sub-menu-button"></span></span>'
 					) ); ?>
 					<a href="tel: <?php echo $contact[ 'phone_number' ]; ?>" class="ocn-phone"><?php echo $contact[ 'phone_number' ]; ?></a>
 				</div>
@@ -58,8 +60,3 @@
 				</div>
 			</div>
 		</header>
-		<?php
-			if( function_exists( 'yoast_breadcrumb' ) ){
-				yoast_breadcrumb( '<div id="breadcrumbs">', '</div>' );
-			}
-		?>

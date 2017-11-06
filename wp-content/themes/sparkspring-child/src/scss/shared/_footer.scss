@@ -2,6 +2,7 @@
 	background: rgba(#009, 0.8);
 	clear: both;
 	color: #fff;
+	margin-top: 5rem;
 	padding: 5rem 0;
 	text-align: center;
 	
@@ -79,7 +80,7 @@
 		}
 		
 		.gform_button{
-			background-image: url(images/blue-arrow-right.png);
+			background-image: url(images/arrow-right-blue.png);
 			float: none;
 
 			@media (max-width : $tablet) {

@@ -89,18 +89,22 @@
 
 			// Add sub-menu functionality when clicked.
 			// If a link is just a hash, toggle it on click.
-			// If it's a legit link, kill it on the first click, but let the second go through.
-			$( 'body' ).on( 'click', '.menu-item-has-children > a', function(ev){
+			$( 'body' ).on( 'click', '.menu-item-has-children a', function(ev){
 				var isTrigger = /#/.test(this.href);
-				var thisParent = $( this ).parent();
+				var thisParent = $( this ).parentsUntil('ul');
 				if( isTrigger ){
 					ev.preventDefault();
 					$( thisParent ).toggleClass( 'menu-item-open' );
-				} else if( !$( thisParent ).hasClass( 'menu-item-open' ) && $( 'body' ).hasClass( 'nav-open' ) ){
-					ev.preventDefault();
-					$( thisParent ).toggleClass( 'menu-item-open' );
 				}
-				$( '.menu-item-has-children' ).not( $( thisParent ) ).removeClass( 'menu-item-open' );
+				thisParent.siblings( '.menu-item-has-children' ).not( $( thisParent ) ).removeClass( 'menu-item-open' );
+			});
+			
+			// Click arrow to open sub-menu
+			$( 'body' ).on( 'click', '.ocn-sub-menu-button', function(ev){
+				var thisParent = $(this).parentsUntil('ul');
+				console.log(thisParent);
+				$( thisParent ).toggleClass( 'menu-item-open' );
+				thisParent.siblings( '.menu-item-has-children' ).not( $( thisParent ) ).removeClass( 'menu-item-open' );
 			});
 
 			// If using the built-in offcanvas nav, add the overlay at the end of the document
@@ -115,7 +119,6 @@
 			});
 		}
 	};
-	
 	
 	var filterDropdown = function(){
 		$('.filter-dropdown').on('click', function(e){

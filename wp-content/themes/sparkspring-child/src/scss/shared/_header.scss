@@ -120,11 +120,25 @@
 		white-space: nowrap;
 		
 		li{
+		}
+	}
+	
+	.menu{
+		> li{
 			display: inline-block;
 			margin-left: 2rem;
+			position: relative;
 			
 			@media (max-width : $desktop) {
 				margin-left: 1.5rem;
+			}
+			
+			&:hover{
+				.sub-menu{
+					opacity: 1;
+					max-height: 50rem;
+					padding: 1.5rem 2rem;
+				}
 			}
 		}
 	}
@@ -135,6 +149,27 @@
 		
 		&:hover{
 			color: $orange;
+		}
+	}
+	
+	.sub-menu{
+		background: rgba($black, 0.8);
+		font-size: 0.8em;
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding: 0 2rem;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		transition: all 0.3s;
+		
+		@media (max-width : $desktop) {
+			//font-size: 1.6rem;
+		}
+		
+		li + li{
+			margin-top: 1rem;
 		}
 	}
 }
@@ -194,6 +229,11 @@
 		
 		li{
 		}
+	}
+	
+	.sub-menu{
+		background: rgba($gray, 0.2);
+		font-size: 0.8em;
 	}
 	
 	a{
