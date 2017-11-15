@@ -16,25 +16,30 @@
 		<footer class="site-footer">
 			<div class="footer-top">
 				<div class="container">
+					<?php if(!is_page_template('page_contact.php')): ?>
 					<div class="left">
 						<?php echo get_field('footer_contact_content', 'option'); ?>
 						<a href="tel: <?php echo $contact[ 'phone_number' ]; ?>" class="footer-phone"><?php echo $contact[ 'phone_number' ]; ?></a>
+						<p class="location">Dallas, TX</p>
 						<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]'); ?>
 					</div>
+					<?php endif; ?>
 					<div class="right">
 						<?php echo get_field('footer_right_content', 'option'); ?>
 						<?php /*<h4><strong>Our</strong> Location</h4>
 						<p class="address"><?php echo $contact[ 'address' ]; ?></p>
 						<div id="gmap"></div>
 						<a href="<?php echo get_field( 'directions_link','option' ); ?>" class="directions">Get Directions &gt;</a>*/?>
-						<div class="social">
-							<h4>Social</h4>
-							<?php foreach ( $contact[ 'social_media_links' ] as $social ): ?>
-								<a href="<?php echo $social[ 'url' ]; ?>" target="_blank">
-									<i class="fa <?php echo $social[ 'class' ]; ?>"></i>
-								</a>
-							<?php endforeach; ?>
-						</div>
+						<?php if ( $contact[ 'social_media_links' ] ): ?>
+							<div class="social">
+								<h4>Social</h4>
+								<?php foreach ( $contact[ 'social_media_links' ] as $social ): ?>
+									<a href="<?php echo $social[ 'url' ]; ?>" target="_blank">
+										<i class="fa <?php echo $social[ 'class' ]; ?>"></i>
+									</a>
+								<?php endforeach; ?>
+							</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

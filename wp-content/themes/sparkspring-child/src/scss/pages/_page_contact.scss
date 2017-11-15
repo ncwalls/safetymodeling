@@ -9,7 +9,7 @@
 				display: inline-block;
 				line-height: 1;
 				margin: 0 3rem 0 0;
-				vertical-align: middle;
+				vertical-align: top;
 
 				@media (max-width : $phablet) {
 					display: block;
@@ -20,6 +20,13 @@
 			.phone{
 				font-family: $font-family-headline;
 				font-size: 2rem;
+				
+				.location{
+					display: block;
+					font-size: 1.5rem;
+					margin-top: 0.5rem;
+					//text-align: right;
+				}
 			}
 			
 			.email{
@@ -86,6 +93,16 @@
 			&:hover{
 				background-color: $black;
 			}
+		}
+	}
+	
+	.site-footer{
+		.left{
+			
+		}
+		.right{
+			float: left;
+			width: 100%;
 		}
 	}
 }

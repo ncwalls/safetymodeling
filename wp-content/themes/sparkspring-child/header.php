@@ -34,7 +34,7 @@
 						'before' => '<span class="ocn-link-wrap">',
 						'after' => '<span class="ocn-sub-menu-button"></span></span>'
 					) ); ?>
-					<a href="tel: <?php echo $contact[ 'phone_number' ]; ?>" class="ocn-phone"><?php echo $contact[ 'phone_number' ]; ?></a>
+					<a href="tel:<?php echo $contact[ 'phone_number' ]; ?>" class="ocn-phone"><?php echo $contact[ 'phone_number' ]; ?><span class="location">Dallas, TX</span></a>
 				</div>
 			</div>
 		<?php endif; ?>
@@ -56,7 +56,7 @@
 					<button class="nav-toggle" type="button" id="nav-toggle">
 						<span>menu</span>
 					</button>
-					<a href="tel: <?php echo $contact[ 'phone_number' ]; ?>" class="phone"><?php echo $contact[ 'phone_number' ]; ?></a>
+					<a href="tel:<?php echo $contact[ 'phone_number' ]; ?>" class="phone"><?php echo $contact[ 'phone_number' ]; ?><span class="location">Dallas, TX</span></a>
 				</div>
 			</div>
 		</header>

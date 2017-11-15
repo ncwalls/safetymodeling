@@ -31,7 +31,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 				
 				<div class="contact-links">
-					<p class="phone"><a href="tel: <?php echo $contact[ 'phone_number' ]; ?>" class="footer-phone"><?php echo $contact[ 'phone_number' ]; ?></a></p>
+					<p class="phone"><a href="tel: <?php echo $contact[ 'phone_number' ]; ?>" class="footer-phone"><?php echo $contact[ 'phone_number' ]; ?></a><span class="location">Dallas, TX</span></p>
 					<p class="email"><a href="mailto:<?php echo $contact[ 'email_address' ]; ?>"><?php echo $contact[ 'email_address' ]; ?></a></p>
 					
 					<p class="social">

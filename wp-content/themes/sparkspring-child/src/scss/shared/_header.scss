@@ -85,7 +85,8 @@
 		}
 		
 		@media (max-width : $mobile-nav-breakpoint) {
-			line-height: 3.5rem;
+			//line-height: 3.5rem;
+			margin-top: -0.6rem;
 			margin-right: 3rem;
 		}
 		
@@ -95,6 +96,13 @@
 		
 		&:hover{
 			color: #fff;
+		}
+		
+		.location{
+			display: block;
+			color: #fff;
+			font-size: 1.2rem;
+			text-align: right;
 		}
 	}
 }
@@ -259,5 +267,12 @@
 
 	&:hover{
 		color: #fff;
+	}
+	
+	
+	.location{
+		display: block;
+		color: #fff;
+		font-size: 1.2rem;
 	}
 }

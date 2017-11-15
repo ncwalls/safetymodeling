@@ -1,0 +1,152 @@
+.blog,
+.archive {
+
+}
+
+.blog-list{
+	border-top: 1px solid $gray;
+	border-bottom: 1px solid $gray;
+	overflow: hidden;
+	margin: 5rem 0;
+	
+	article{
+		float: left;
+		margin: 2.6rem 8% 2.6rem 0;
+		width: 46%;
+		
+		@media (max-width : $tablet) {
+			margin-right: 0;
+			width: 100%;
+		}
+		
+		&:nth-child(2n){
+			margin-right: 0;
+		}
+		&:nth-child(2n+1){
+			clear: left;
+		}
+		
+		figure{
+			border: 0;
+			float: left;
+			margin: 0;
+			padding: 0;
+			width: 25%;
+			
+			@media (max-width : $laptop) {
+				margin-bottom: 1rem;
+				width: 100%;
+			}
+			@media (max-width : $tablet) {
+				width: 25%;
+			}
+			@media (max-width : $phablet) {
+				float: none;
+				width: 100%;
+			}
+			
+			img{
+				display: block;
+				height: auto;
+				margin: 0;
+				width: 100%;
+			}
+			
+			& + .content{
+				float: right;
+				padding-left: 1.7rem;
+				width: 75%;
+			
+				@media (max-width : $laptop) {
+					padding-left: 0;
+					width: 100%;
+				}
+				@media (max-width : $tablet) {
+					padding-left: 2rem;
+					width: 75%;
+				}
+				@media (max-width : $phablet) {
+					float: none;
+					padding-left: 0;
+					width: 100%;
+				}
+			}
+		}
+		
+		
+		h2,
+		h3{
+			font-size: 3.6rem;
+			line-height: 1.2;
+			margin: 0 0 1.7rem 0;
+			
+			@media (max-width : $tablet) {
+				font-size: 3rem;
+			}
+			
+			a{
+				color: $black;
+			}
+		}
+		
+		.post-meta{
+			color: #7d7d7d;
+			font-size: 1.3rem;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			
+			li{
+				display: inline-block;
+				
+				& + li{
+					margin-left: 0.5rem;
+					
+					&:before{
+						content: '|';
+						display: inline-block;
+						margin-right: 0.7rem;
+					}
+				}
+			}
+		}
+		
+		.plus-button{
+			margin-top: 3rem;
+			
+			@media (max-width : $phablet) {
+				margin-top: 2rem;
+			}
+		}
+	}
+}
+
+
+.archive-nav{
+	clear: both;
+	font-family: $font-family-headline;
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	line-height: 3rem;
+	list-style: none;
+	text-align: center;
+	text-transform: uppercase;
+	
+	.page-numbers{
+		display: inline-block;
+		margin: 0 0.7rem;
+		
+		&:hover{
+			//color: $blue;
+		}
+		
+		&.current{
+			border-radius: 50%;
+			background: $orange;
+			color: #fff;
+			width: 3rem;
+			height: 3rem;
+			text-align: center;
+		}
+	}
+}
