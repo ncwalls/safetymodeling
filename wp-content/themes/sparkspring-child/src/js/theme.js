@@ -5,7 +5,8 @@
 	};
 
 	$(document).ready(function(){
-		docReady();
+		//docReady();
+		$('body').on('contextmenu', 'img', function(e){ return false; });
 	});
 
 })(jQuery);
